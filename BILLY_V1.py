@@ -356,7 +356,7 @@ def weather_updates(zip_code_user):
     api_key = "daca97d99589ffe1a5693d0740888ebe"
     url = f"http://api.openweathermap.org/data/2.5/weather?zip={zip_code_user_two},US&appid={api_key}&units=imperial"
     response = requests.get(url)
-    if response.status_code ==200:
+    if response.status_code ==200:#200 connected
         data = response.json()
         return(f"Temperature: {data['main']['temp']}°F" +"\n" +f"Conditions: {data['weather'][0]['description']}"+"\n"+f"City: {data['name']}")
 
